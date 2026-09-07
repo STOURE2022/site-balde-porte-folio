@@ -11,6 +11,7 @@ xcopy css publication\css\ /e /i /q >nul
 xcopy js publication\js\ /e /i /q >nul
 xcopy assets publication\assets\ /e /i /q >nul
 xcopy fr publication\fr\ /e /i /q >nul
+xcopy en publication\en\ /e /i /q >nul
 echo.
 echo   Dossier "publication" pret.
 echo   Ouvrez Cloudflare Pages et glissez-deposez le dossier "publication".

@@ -6,5 +6,5 @@ set -e
 rm -rf publication
 mkdir -p publication
 cp index.html 404.html _headers publication/
-cp -r css js assets fr publication/
+cp -r css js assets fr en publication/
 echo "Dossier publication/ genere."

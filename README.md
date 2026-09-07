@@ -1,12 +1,13 @@
 # Site officiel — Secuna Baldé
 
-Site portfolio premium **bilingue (portugais / français)** avec **mode édition intégré** : vous pouvez modifier les textes, changer les photos et ajouter des sections sans toucher au code.
+Site portfolio premium **trilingue (portugais / français / anglais)** avec **mode édition intégré** : vous pouvez modifier les textes, changer les photos et ajouter des sections sans toucher au code.
 
 ## Structure
 
 ```
 index.html        → la page principale (PORTUGAIS — langue officielle)
 fr/index.html     → la version française
+en/index.html     → la version anglaise
 css/style.css     → le design (commun aux deux langues)
 js/main.js        → animations et navigation
 js/editor.js      → le mode édition
@@ -18,8 +19,9 @@ GUIDE-DEPLOIEMENT.md → guide de mise en ligne (Phase 1)
 
 ## Langues
 
-- Le sélecteur **PT | FR** est dans le menu de navigation.
-- **Chaque langue se modifie séparément** : ouvrez la page PT ou la page FR, activez le mode édition, modifiez, exportez. Le fichier exporté depuis la page française doit remplacer `fr/index.html` ; celui exporté depuis la page portugaise remplace `index.html` à la racine.
+- Le sélecteur **PT | FR | EN** est dans le menu de navigation.
+- **Chaque langue se modifie séparément** : ouvrez la page PT, FR ou EN, activez le mode édition, modifiez, exportez. Le fichier exporté remplace `index.html` à la racine (PT), `fr/index.html` (FR) ou `en/index.html` (EN).
+- Pour un nouveau contenu dans les trois langues d'un coup, le plus simple est de fournir le texte français au pôle IT, qui livre les trois versions traduites et synchronisées.
 
 ## Ouvrir le site
 
