@@ -1,6 +1,7 @@
 # Guide e-mails — secunabalde.com
 ## Zoho Mail + Cloudflare DNS · Pôle IT
 
+
 Objectif : 3 boîtes professionnelles qui envoient **et** reçoivent depuis @secunabalde.com, avec une protection complète contre l'usurpation d'identité (indispensable pour un candidat).
 
 | Adresse | Usage | Qui la consulte |
