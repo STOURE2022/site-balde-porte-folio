@@ -11,7 +11,11 @@
 (function () {
   "use strict";
 
-  /* Une sauvegarde distincte par langue (PT à la racine, FR dans fr/) */
+  /* Version de structure du site : à incrémenter à chaque évolution
+     structurelle des pages (nouvelle section, nouvelle langue…) —
+     les sauvegardes locales d'une version antérieure sont ignorées. */
+  var SITE_VERSION = 2;
+  /* Une sauvegarde distincte par langue (PT à la racine, FR/EN en sous-dossiers) */
   var LANG = document.documentElement.lang || "pt";
   var LS_KEY = "sb-site-v1-" + LANG;
   /* Préfixe des chemins (défini par la page FR via window.SB_BASE = '../') */
@@ -27,7 +31,7 @@
      est donc bien pris en compte par les animations et menus. */
   try {
     var saved = JSON.parse(localStorage.getItem(LS_KEY) || "null");
-    if (saved && saved.regions) {
+    if (saved && saved.regions && saved.v === SITE_VERSION) {
       REGIONS.forEach(function (id) {
         var el = document.getElementById(id);
         if (el && typeof saved.regions[id] === "string") {
@@ -146,7 +150,7 @@
 
   function saveNow() {
     try {
-      localStorage.setItem(LS_KEY, JSON.stringify({ regions: collectRegions(), t: Date.now() }));
+      localStorage.setItem(LS_KEY, JSON.stringify({ v: SITE_VERSION, regions: collectRegions(), t: Date.now() }));
       notify("Modifications enregistrées ✓");
     } catch (e) {
       notify("⚠ Sauvegarde impossible (photos trop lourdes ?)");
